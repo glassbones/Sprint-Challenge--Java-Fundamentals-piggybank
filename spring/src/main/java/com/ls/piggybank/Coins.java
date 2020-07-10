@@ -66,12 +66,6 @@ public class Coins {
 
     @Override
     public String toString() {
-        return "Coins{" +
-                "coinid=" + coinid +
-                ", name='" + name + '\'' +
-                ", namepural='" + namepural + '\'' +
-                ", value=" + value +
-                ", quantity=" + quantity +
-                '}';
+        return quantity + " " + name;
     }
 }
