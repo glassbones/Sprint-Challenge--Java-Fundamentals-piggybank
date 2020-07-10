@@ -6,7 +6,7 @@ import java.util.List;
 public class Total {
 
     public List<Coins> totalCoins = new ArrayList<>();
-    private double sum;
+    //private double sum;
 
     public Total(){
 
@@ -20,9 +20,14 @@ public class Total {
 
     }
 
-    public void setSum(){ totalCoins.forEach(c -> sum = c.getValue() + sum);}
-    public double getSum(){ return sum;}
+    //public void setSum(){ totalCoins.forEach(c -> sum = sum + 1);}
+    //public double getSum(){ return sum; }
 
+    public double getSum() {
+        double sum = 0;
+        for (Coins c: totalCoins) { sum += (c.getValue() * c.getQuantity()); }
+        return sum;
+    }
 
 }
 

@@ -1,5 +1,6 @@
 package com.ls.piggybank;
 
+import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class Coins {
@@ -64,8 +65,13 @@ public class Coins {
         this.quantity = quantity;
     }
 
+
+    public void addToList(List<String> list){
+        list.add(this.toString());
+    }
+
     @Override
     public String toString() {
-        return quantity + " " + name;
+        return quantity + " " + name /* + "\r\n" */;
     }
 }
